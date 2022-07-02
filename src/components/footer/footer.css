@@ -1,0 +1,26 @@
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer ul {
+    margin: 20px 40px 20px 0;
+    display: inline-block;
+    vertical-align: top;
+    list-style: none;
+}
+
+footer .middle {
+    background: #87968b;
+}
+
+footer .middle a {
+    color: #ddd;
+    font-size: 13px;
+    display: block;
+    font-weight: 500;
+}
