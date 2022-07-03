@@ -7,13 +7,8 @@ import { useNavigate } from 'react-router-dom';
 const PriceTotal = () => {
     const [
         {
-            login: {
-                userName,
-                isLoggedIn,
-            },
             cart,
         },
-        dispatch,
     ] = useStateValue();
     const navigate = useNavigate();
 

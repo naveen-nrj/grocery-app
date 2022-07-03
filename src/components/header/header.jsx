@@ -4,7 +4,6 @@ import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartRoundedIcon from '@mui/icons-material/ShoppingCartRounded';
 import { useStateValue } from "core-application/services/utils/context/context";
 import "./header.css";
-import { Button } from '@mui/material';
 import * as AlertService from "core-application/services/utils/alert-service/alert-service"
 
 const Header = () => {
@@ -14,9 +13,6 @@ const Header = () => {
                 userName,
                 isLoggedIn
 
-            },
-            config: {
-                search,
             },
             cart
         },

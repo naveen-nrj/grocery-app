@@ -1,14 +1,8 @@
-import { Box, Button, Grid } from '@mui/material';
+import { Grid } from '@mui/material';
 import Product from 'components/product/product';
 import * as HomeController from "components/home/home-controller";
 import { useStateValue } from 'core-application/services/utils/context/context';
-import {
-    useJsApiLoader,
-    GoogleMap,
-    Marker,
-    Autocomplete,
-    DirectionsRenderer,
-} from '@react-google-maps/api';
+
 import { Navigate } from 'react-router-dom';
 
 import React, { useEffect, useState } from 'react';
@@ -29,19 +23,11 @@ const Home = () => {
                 search,
                 store,
             },
-            cart,
         },
         dispatch,
     ] = useStateValue();
     const [filteredItems, setFilteredItems] = useState([]);
-    // const { isLoaded } = useJsApiLoader({
-    //     googleMapsApiKey: "AIzaSyDtTxs1otUR7Pmy5sVWOl0NLs6UmG_gcRQ",
 
-    // })
-    // const [map, setMap] = useState(/** @type google.maps.Map */(null))
-    // const [directionsResponse, setDirectionsResponse] = useState(null)
-    // const [distance, setDistance] = useState('')
-    // const [duration, setDuration] = useState('')
 
     useEffect(() => {
         if (!orders.length) {
@@ -107,10 +93,6 @@ const Home = () => {
     return (
         <>
             <div className="home">
-
-                {/* <div className='home_get_button'>
-                    <Button onClick={getStore} variant="contained">Get Nearest Store</Button>
-                </div> */}
                 {
                     Object.keys(store).length ? (
                         <>
@@ -119,27 +101,7 @@ const Home = () => {
                                     <Grid item xs={12}>
                                         <StoreCard store={store} />
                                     </Grid>
-                                    {/* <Grid item xs={4}>
-                                        <Box position="absolute" left={0} top={0} h="100%" w="100%">
-                                            <GoogleMap
-                                                center={{ lat: store.Latitude, lng: store.Longitude }}
-                                                zoom={15}
-                                                mapContainerStyle={{ width: '100%', height: '100%' }}
-                                                options={{
-                                                    zoomControl: false,
-                                                    streetViewControl: false,
-                                                    mapTypeControl: false,
-                                                    fullscreenControl: false,
-                                                }}
-                                                onLoad={map => setMap(map)}
-                                            >
-                                                <Marker position={{ lat: store.Latitude, lng: store.Longitude }} />
-                                                {directionsResponse && (
-                                                    <DirectionsRenderer directions={directionsResponse} />
-                                                )}
-                                            </GoogleMap>
-                                        </Box>
-                                    </Grid> */}
+
                                 </Grid>
                             </div>
                             <div className="home__container">

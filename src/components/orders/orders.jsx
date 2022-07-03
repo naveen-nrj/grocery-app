@@ -7,19 +7,13 @@ const Orders = () => {
     const [
         {
             login: {
-                latitude,
-                longitude,
                 isLoggedIn
             },
             config: {
-                items,
-                search,
-                store,
                 orders,
             },
-            cart,
         },
-        dispatch,
+
     ] = useStateValue();
     if (!isLoggedIn) {
         return <Navigate to="/login" replace />;

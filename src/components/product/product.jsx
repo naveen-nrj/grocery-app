@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import "./product.css";
 import Button from '@mui/material/Button';
 import { useStateValue } from 'core-application/services/utils/context/context';
@@ -8,14 +8,9 @@ const Product = ({ image, rating, price, title, id }) => {
 
     const [
         {
-            login: {
-                userName,
-                isLoggedIn,
-            },
             config: {
                 items
             },
-            cart,
         },
         dispatch,
     ] = useStateValue();

@@ -1,10 +1,4 @@
-import React, { useEffect, useState } from 'react';
-//import Avatar from '@mui/material/Avatar';
-//import CssBaseline from '@mui/material/CssBaseline';
-// import FormControlLabel from '@mui/material/FormControlLabel';
-// import Checkbox from '@mui/material/Checkbox';
-// import Link from '@mui/material/Link';
-// import Grid from '@mui/material/Grid';
+import React from 'react';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import Box from '@mui/material/Box';
@@ -13,7 +7,6 @@ import Container from '@mui/material/Container';
 import { useNavigate } from 'react-router-dom';
 import "./login.css";
 import * as AlertService from "core-application/services/utils/alert-service/alert-service"
-//import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { useStateValue } from "core-application/services/utils/context/context";
 import * as AuthenticationService from "core-application/services/authentication/authentication"
 
@@ -33,10 +26,6 @@ const Login = () => {
     ] = useStateValue();
     const navigate = useNavigate();
 
-
-    useEffect(() => {
-        console.log(login);
-    }, [login]);
 
     const handleLogin = () => {
         if (!latitude || !longitude) {

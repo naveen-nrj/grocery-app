@@ -18,7 +18,6 @@ const order = ({ order, index }) => {
                         key={item.id}
                         id={item.id}
                         title={item.name}
-                        //image={item.image}
                         price={item.discountedSellingPrice}
                         rating={5}
                         hiddenButton={true}
